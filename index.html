@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Equation Solver</title>
+</head>
+<body>
+	<div class="container">
+	<h5 class="page-headline">Quadratic Equation Solver</h5>
+	<form>
+	<div class="input-field col s6">
+  	<input class="xs" id="last_name" type="text" class="validate" autocomplete="off" required>
+  	<label for="last_name">Enter Coefficient of x²</label>
+  </div>
+  <div class="input-field col s6">
+  	<input class="x" id="last_name" type="text" class="validate" autocomplete="off" required>
+  	<label for="last_name">Enter Coefficient of x</label>
+  </div>
+  <div class="input-field col s6">
+  	<input class="c" id="last_name" type="text" class="validate" autocomplete="off" required>
+  	<label for="last_name">Enter Constant Term</label>
+  </div>
+  <div class="btn-holder">
+  	<button type="submit" class="btn waves-effect waves-teal" id="sub-btn">Solve</button>
+
+		<button id="reset-btn" type="reset" class="btn waves-effect waves-yellow right">Clear</button>
+  </div>
+	</form>
+	<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h6>Please Enter A Valid Value.</h6>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-close waves-effect waves-green btn-flat">Ok</button>
+    </div>
+  </div>
+	<div class="resultBar"></div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
