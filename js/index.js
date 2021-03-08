@@ -5,6 +5,7 @@ const xCo = document.querySelector(".x");
 const con = document.querySelector(".c");
 const subBtn = document.querySelector("#sub-btn");
 const resultBar = document.querySelector(".resultBar");
+const clearBtn = document.querySelector("#reset-btn");
 
 let root1, root2;
 
@@ -23,8 +24,8 @@ function getAnswer(a, b, c) {
 	    // result
 	    resultBar.innerHTML = `
 	    	<h5>Answer👇🏻</h5>
-	    	<p>α --> “${root1}”</p>
-	    	<p>β --> “${root2}”</p>
+	    	<p>α --> “ <span class="answerText">${root1}</span> ”</p>
+	    	<p>β --> “ <span class="answerText">${root2}</span> ”</p>
 	    	<p>Discriminant --> ${discriminant}</p>
 	    `;
 	}
@@ -35,7 +36,7 @@ function getAnswer(a, b, c) {
 	    resultBar.innerHTML = `
 	    	<h5>Answer👇🏻</h5>
 	    	<p>Same Roots</p>
-	    	<p>α & β --> “${root1}”</p>
+	    	<p>α & β --> “ <span class="answerText">${root1}</span> ”</p>
 	    	<p>Discriminant --> ${discriminant}</p>
 	    `;
 	}
@@ -76,5 +77,10 @@ subBtn.addEventListener("click", (e) => {
 		instance.open();
 	} else {
   	getAnswer(firstNum, secondNum, thirdNum);
+  	resultBar.classList.remove("hidden_result");
 	}
+});
+
+clearBtn.addEventListener("click", () => {
+  resultBar.classList.add("hidden_result");
 });
